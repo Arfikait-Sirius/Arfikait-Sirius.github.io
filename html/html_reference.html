@@ -1,0 +1,232 @@
+<html>
+     <head>
+          <title>HTML 簡易リファレンス</title>
+     </head>
+     <body>
+          <h1>HTML 簡易リファレンス</h1>
+          <div>
+               <h2>Menu</h2>
+               <ol>
+                    <li><a href="#part_head_and_body">head と body</a></li>
+                    <li><a href="#part_about_escape">エスケープ文字</a></li>
+                    <li><a href="#part_tags">よく使うタグ</a></li>
+                    <li><a href="#part_about_id_and_class">id と class</a></li>
+                    <li><a href="#part_form_and_input">form と input</a></li>
+                    <li><a href="#part_about_input">input の type</a></li>
+                    <li><a href="#part_about_table">table</a></li>
+                    <li><a href="#part_about_favicon">favicon</a></li>
+                    <li><a href="#part_about_css_and_js">CSS と JavaScript</a></li>
+               </ol>
+          </div>
+          <hr />
+          <div id="part_head_and_body">
+               <h2>head と body</h2>
+               <h3>head - HTML のメタ情報を記述するタグ</h3>
+               <div>
+                    タイトルの編集、メタデータ定義を行うことができる。
+                    <br />
+                    知識のあるエンジニアでもない限りさわる機会はほとんどない。
+                    <br />
+                    &lt;title&gt; タグでタイトルを編集することができる。
+               </div>
+               <h3>body - HTML で実際に画面に表示する情報を記述するタグ</h3>
+               <div>
+                    これから主に編集するのはこの body タグ内になる。
+                    <br />
+                    以下に記載のある様々なタグは body タグ中で使用する。
+               </div>
+          </div>
+          <hr />
+          <div id="part_about_escape">
+               <h2>エスケープ文字</h2>
+               <h3>エスケープ文字 - HTML の特殊文字を画面に表示するために使用する制御文字</h3>
+               <div>
+                    "&lt;" や "&gt;" みたいな文字は HTML ファイルではタグの開始終了文字として認識されてしまい、
+                    <br />
+                    そのまま表示文字列として書いてもエラーになってしまう。
+                    <br />
+                    "&lt;" みたいに画面に出すためには "&amp;○○;" の形式で特殊文字のコードを書くと表示できる。
+                    <br />
+                    ちなみに "&lt;" は "&amp;lt;" で、"&gt;" は "&amp;gt;" でエスケープできる。
+               </div>
+          </div>
+          <hr />
+          <div id="part_tags">
+               <h2>よく使うタグ</h2>
+               <div>
+                    以下に並べるタグはよく使う。
+               </div>
+               <h3>頻出タグ一覧</h3>
+               <ul>
+                    <li>&lt;div&gt;</li>
+                    <li>&lt;p&gt;</li>
+                    <li>&lt;a&gt;</li>
+                    <li>&lt;br&gt;</li>
+                    <li>&lt;hr&gt;</li>
+                    <li>&lt;h1&gt;</li>
+                    <li>&lt;h2&gt;</li>
+                    <li>&lt;form&gt;</li>
+                    <li>&lt;input&gt;</li>
+                    <li>&lt;script&gt;</li>
+               </ul>
+          </div>
+          <hr />
+          <div id="part_about_id_and_class">
+               <h2>id と class</h2>
+               <h3>id - そのタグを一意に特定する識別子</h3>
+               <div>
+                    たくさんの章だったり枠だったりを識別子なしで並べると、
+                    <br />
+                    あとから色を付けたり動きを付けたりするときにどれに付ければいいかの指定が出来なくなってしまう。
+                    <br />
+                    そこで、ある程度まとまった章や枠には id を付けて管理する仕組みが用意されている。
+               </div>
+               <h3>class - そのタグをグルーピングする識別子</h3>
+               <div>
+                    id はタグ 1つ 1つに対して付けていくのに対して、class はグループごとになるイメージ。
+                    <br />
+                    ある程度のまとまりで色や動きが同じ場合は、
+                    <br />
+                    class を使って「このグループはこの色」みたいに一括指定できる仕組みが用意されている。
+               </div>
+          </div>
+          <hr />
+          <div id="part_form_and_input">
+               <h2>form と input</h2>
+               <h3>form - サーバーに送信するデータをまとめるタグ</h3>
+               <div>
+                    データを送信する場合、「どのタグのどの値を送信するか」を決めておかないと、
+                    <br />
+                    想定外の値まで送信されてしまうことがある。
+                    <br />
+                    ( まぁ別にそのためだけに用意されているタグではないが )
+                    <br />
+                    &lt;form&gt; から &lt;/form&gt; までの間に囲まれた部分に含まれる、かつ、
+                    <br />
+                    後述する input タグの値を送信することが出来る。
+               </div>
+               <h3>input - ユーザーの入力を受け付けるタグ</h3>
+               <div>
+                    ユーザーからの入力を受け付ける。
+                    <br />
+                    ボタンだったりチェックボックスだったりその形式は様々。
+                    <br />
+                    選択入力をする &lt;select&gt; なんてタグもあるが、
+                    <br />
+                    入力情報が欲しいだけなら input タグだけでも実現は出来る。
+               </div>
+          </div>
+          <hr />
+          <div id="part_about_input">
+               <h2>input の type</h2>
+               <div>
+                    以下に並べる type はよく使う。
+               </div>
+               <h3>頻出 type</h3>
+               <ul>
+                    <li>text</li>
+                    <li>password</li>
+                    <li>radio</li>
+                    <li>checkbox</li>
+                    <li>date</li>
+               </ul>
+          </div>
+          <hr />
+          <div id="part_about_table">
+               <h2>table</h2>
+               <div>
+                    テーブル( 表 )を表示する場合に使用する。
+                    <br />
+                    何かしらの比較表だったり早見表だったりを作るときに役立つ。
+                    <br />
+                    <div>
+                         こんなやつ。
+                         <br />
+                         <table>
+                              <th>
+                                   表タイトル1
+                              </th>
+                              <th>
+                                   表タイトル2
+                              </th>
+                              <th>
+                                   表タイトル3
+                              </th>
+                              <tbody>
+                                   <tr>
+                                        <td>
+                                             枠1-1
+                                        </td>
+                                        <td>
+                                             枠1-2
+                                        </td>
+                                        <td>
+                                             枠1-3
+                                        </td>
+                                   </tr>
+                                   <tr>
+                                        <td>
+                                             枠2-1
+                                        </td>
+                                        <td>
+                                             枠2-2
+                                        </td>
+                                        <td>
+                                             枠2-3
+                                        </td>
+                                   </tr>
+                              </tbody>
+                         </table>
+                    </div>
+               </div>
+          </div>
+          <hr />
+          <div id="part_about_favicon">
+               <h2>favicon</h2>
+               <div>
+                    ウェブページのアイコンのこと。
+               </div>
+          </div>
+          <hr />
+          <div id="part_about_css_and_js">
+               <h2>CSS と JavaScript について</h2>
+               <h3>CSS - 色や形などコンテンツをデザインする仕組み</h3>
+               <div>
+                    <style type="text/css">
+                         #css_example_1 {
+                              color: aquamarine ;
+                              background-color: black ;
+                         }
+                         #css_example_2 {
+                              font-size: 24pt ;
+                         }
+                         #css_example_3 {
+                              color: #FF1111 ;
+                         }
+                    </style>
+                    <span id="css_example_1">たとえば</span><span id="css_example_2">こんなことが</span><span id="css_example_3">出来たりする。</span>
+               </div>
+               <h3>JavaScript - コンテンツに動きを付けられる仕組み</h3>
+               <div>
+                    たとえばこんなことが出来たりする。
+                    <br />
+                    メッセージをどうぞ:<input type="text" id="text_example" placeholder="ここにメッセージを入力" />
+                    <button id="button_example">OK</button>
+                    <br />
+                    入力したメッセージ:<label id="label_example"></label>
+                    <script type="text/javascript">
+                         const button = document.getElementById( "button_example" ) ;
+                         button.onclick = () => {
+                              const messageBox = document.getElementById( "text_example" ) ;
+                              document.getElementById( "label_example" ).innerHTML = messageBox.value ;
+                         } ;
+                    </script>
+               </div>
+          </div>
+          <hr />
+          <br />
+          <div>
+               Footer なんかを作るのもヨシ！
+          </div>
+     </body>
+</html>
