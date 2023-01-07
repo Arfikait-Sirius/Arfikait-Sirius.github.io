@@ -12,25 +12,40 @@
     </head>
     <body>
         <div id="main">
+            <p>Ver 0.1.0</p>
             <h1>Game</h1>
             <button id="button_restart">RESTART</button>
             <div>
                 <h1><label id="label_clear_message"></label></h1>
                 <h3>SCORE: <label id="label_score">0</label></h3>
-                [ GOAL = <label id="label_goal_score"></label> ]<input id="textbox_new_goal_score" type="number" min="10000" placeholder="please input new goal." style="display: none ;" value="10000" /><button id="button_change_goal_score">CHANGE</button>
+                [ GOAL = <label id="label_goal_score"></label> ] <input id="textbox_new_goal_score" type="number" min="10000" placeholder="please input new goal." style="display: none ;" value="10000" /><button id="button_change_goal_score">CHANGE</button>
                 <hr>
                 <div>
-                    <h4>Skills:</h4>
-                    MULTIPLIER: <button id="button_skill_x2">x2</button>
-                    <br>
-                    BOMB: <button id="button_skill_bomb">bomb</button>
+                    <details>
+                        <summary>Skill Controls</summary>
+                        <br>
+                        MULTIPLIER: <button id="button_skill_x2">x2</button>
+                        <br>
+                        BOMB: <button id="button_skill_bomb">+1</button>
+                        <br>
+                        BOMB-LIMIT: <input id="textbox_skill_bomb_limit" type="number" min="10" placeholder="please new bomb stack." style="display: none ;" value="10" /><button id="button_skill_change_bomb_limit">CHANGE</button>
+                        <br>
+                        BASE-UP: <button id="button_skill_base_up">+1</button>
+                    </details>
                 </div>
                 <hr>
                 <div>
-                    <h4>Status:</h4>
-                    MULTIPLIER: x<label id="label_status_multiplier">1</label>
-                    <br>
-                    BOMB: x<label id="label_status_bomb">1</label>
+                    <details>
+                        <summary>Skill Status</summary>
+                        <br>
+                        MULTIPLIER: x<label id="label_status_multiplier">1</label>
+                        <br>
+                        BOMB: x<label id="label_status_bomb">1</label>
+                        <br>
+                        BOMB_LIMIT: <label id="label_skill_bomb_limit">10</label>
+                        <br>
+                        BASE-UP: <label id="label_skill_base_up">0</label>
+                    </details>
                 </div>
                 <hr>
                 <canvas id="canvas_click" width="700" height="200" style="background-color: rgb(82, 240, 192) ;"></canvas>
