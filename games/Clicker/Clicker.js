@@ -22,9 +22,6 @@ const SKILLS = {
     MULTIPLIER: "multiplier",
     BOMB: "bomb",
 } ;
-const skillsMap = new Map() ;
-skillsMap.set( SKILLS.MULTIPLIER, multiplier ) ;
-skillsMap.set( SKILLS.BOMB, bombScore ) ;
 
 const STATUS = {
     MULTIPLIER: "multiplier",
@@ -115,24 +112,16 @@ Jessica.fnAddClickEvent( skillBomb, () => {
     updateStatus( STATUS.BOMB, bombScore ) ;
 } ) ;
 
-const getScore = ( currScore, base, skills ) => {
+const getScore = ( currScore, base ) => {
     let newScore = base ;
 
-    skills.forEach( ( v, k ) => {
-        switch( k ){
-        case SKILLS.MULTIPLIER:
-            newScore *= v ;
-            break ;
-        case SKILLS.BOMB:
-            if( bombStack == 10 ){
-                newScore += currScore * bombScore ;
-                bombStack = 1 ;
-            } else {
-                bombStack++ ;
-            }
-            break ;
-        }
-    } ) ;
+    newScore *= multiplier ;
+    if( bombStack == 10 ){
+        newScore += currScore * bombScore ;
+        bombStack = 1 ;
+    } else {
+        bombStack++ ;
+    }
 
     return newScore ;
 } ;
@@ -143,7 +132,7 @@ let score = 0 ;
 const clickArea = Jessica.fnGetElementFromId( "canvas_click" ) ;
 
 Jessica.fnAddClickUpEvent( clickArea, () => {
-    score += getScore( score, baseScore, skillsMap ) ;
+    score += getScore( score, baseScore ) ;
     updateScore( score ) ;
     isClear( score ) ;
 } ) ;
