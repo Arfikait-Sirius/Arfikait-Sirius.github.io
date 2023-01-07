@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>MusiClicker</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                user-select: none ;
+                -webkit-user-select: none ;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Game</h1>
+            <button id="button_restart">RESTART</button>
+            <div>
+                <h1><label id="label_clear_message"></label></h1>
+                <h3>SCORE: <label id="label_score">0</label></h3>
+                [ GOAL = <label id="label_goal_score"></label> ]<input id="textbox_new_goal_score" type="number" min="10000" placeholder="please input new goal." style="display: none ;" value="10000" /><button id="button_change_goal_score">CHANGE</button>
+                <hr>
+                <div>
+                    <h4>Skills:</h4>
+                    MULTIPLIER: <button id="button_skill_x2">x2</button>
+                    <br>
+                    BOMB: <button id="button_skill_bomb">bomb</button>
+                </div>
+                <hr>
+                <div>
+                    <h4>Status:</h4>
+                    MULTIPLIER: x<label id="label_status_multiplier">1</label>
+                    <br>
+                    BOMB: x<label id="label_status_bomb">1</label>
+                </div>
+                <hr>
+                <canvas id="canvas_click" width="700" height="200" style="background-color: rgb(82, 240, 192) ;"></canvas>
+            </div>
+        </div>
+    </body>
+    <script type="module" src="./Clicker.js"></script>
+</html>
