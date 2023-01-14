@@ -12,7 +12,7 @@
     </head>
     <body>
         <div id="main">
-            <p>Ver 0.1.0</p>
+            <p>Ver 0.2.0</p>
             <h1>Game</h1>
             <button id="button_restart">RESTART</button>
             <div>
@@ -24,13 +24,15 @@
                     <details>
                         <summary>Skill Controls</summary>
                         <br>
-                        MULTIPLIER: <button id="button_skill_x2">x2</button>
+                        STANDARD-BASE: <button id="button_skill_standard_base">+1</button>
                         <br>
-                        BOMB: <button id="button_skill_bomb">+1</button>
+                        MULTIPLIER: <button id="button_skill_multiplier_x2">x2</button>
                         <br>
-                        BOMB-LIMIT: <input id="textbox_skill_bomb_limit" type="number" min="10" placeholder="please new bomb stack." style="display: none ;" value="10" /><button id="button_skill_change_bomb_limit">CHANGE</button>
+                        BOMB-BASE: <button id="button_skill_bomb_base">+1</button>
                         <br>
-                        BASE-UP: <button id="button_skill_base_up">+1</button>
+                        BOMB-INTERVAL: <input id="textbox_skill_bomb_interval" type="number" min="10" placeholder="please new bomb interval." style="display: none ;" value="10" /><button id="button_skill_change_bomb_interval">CHANGE</button>
+                        <br>
+                        AUTO-BASE: <button id="button_skill_auto_base">+10</button>
                     </details>
                 </div>
                 <hr>
@@ -38,13 +40,13 @@
                     <details>
                         <summary>Skill Status</summary>
                         <br>
+                        STANDARD-BASE: <label id="label_skill_standard_base">0</label>
+                        <br>
                         MULTIPLIER: x<label id="label_status_multiplier">1</label>
                         <br>
-                        BOMB: x<label id="label_status_bomb">1</label>
+                        BOMB: x<label id="label_status_bomb_base">0</label> Score / <label id="label_skill_bomb_interval">10</label> click
                         <br>
-                        BOMB_LIMIT: <label id="label_skill_bomb_limit">10</label>
-                        <br>
-                        BASE-UP: <label id="label_skill_base_up">0</label>
+                        AUTO: <label id="label_skill_auto_base">0</label> Score / <label id="label_skill_auto_interval">10</label> sec
                     </details>
                 </div>
                 <hr>
